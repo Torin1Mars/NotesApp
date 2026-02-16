@@ -51,7 +51,7 @@ fun MainScreenLayout(myNotesHolder: NotesHolder = viewModel(), editCurrentNote:(
     drawBackground(modifier, myBgColor)
 
     Scaffold(modifier = modifier.fillMaxSize().padding(horizontal = 10.dp),
-        topBar = {TopBar(modifier, myNotesHolder.getQuantity())},
+        topBar = {TopBar(modifier, myNotesHolder.notesList)},
         bottomBar = {BottomBar(modifier, {myNotesHolder.addNote()} )},
         containerColor = Color.Transparent)
     {
